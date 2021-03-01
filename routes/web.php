@@ -26,9 +26,9 @@ use App\Http\Controllers\WelcomeController;
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/', [App\Http\Controllers\WelcomeController::class, 'welcome'])->name('home');
+Route::get('/', [WelcomeController::class, 'welcome']);
 
 
 Route::prefix('category')->group(function () {
